@@ -1,24 +1,18 @@
 <?php
-
-$fsi = new FilesystemIterator(__DIR__);
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 ?>
 
-<!DOCTYPE html>
-<html>
+<?php include __DIR__ . '/includes/header.php' ?>
+<table id="dirListTable">
+    <tr>
+        <th>Name</th>
+        <th>Size</th>
+        <th>Last Opened</th>
+    </tr>
 
-<head>
-    <meta name="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+    <?php include __DIR__ . '/includes/partials/dir_table.php' ?>
+</table>
 
-<body>
-    <table style="width: 100%;">
-        <tr>
-            <th>Name</th>
-            <th>Size</th>
-            <th>Last Opened</th>
-        </tr>
-        <?php include __DIR__ . '/dir_table.php' ?>
-    </table>
-</body>
-
-</html>
+<?php include __DIR__ . '/includes/footer.php' ?>
