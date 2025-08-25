@@ -1,6 +1,7 @@
 <?php
 
-$path = isset($_GET['path']) ? check_path($_GET['path']) : SITE_PATH;
+// NOTE: Gets absolute path, this is safer.
+$path = abs_path($_GET['path'] ?? '');
 
 // Exit script early if the path cannot be found.
 if (!file_exists($path)) {
@@ -38,7 +39,7 @@ if (is_dir($path)) {
         <?php foreach ($fsi as $f): ?>
             <tr>
                 <td>
-                    <a href="?path=<?= urlencode($path . DIRECTORY_SEPARATOR . $f->getFilename()) ?>">
+                    <a href="?path=<?= urlencode(rel_path($path . '/' . $f->getFilename())) ?>">
                         <?= htmlspecialchars($f->getFilename()) ?>
                     </a>
                 </td>

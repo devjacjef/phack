@@ -15,6 +15,32 @@ function check_path(string $path): string {
 }
 
 /**
+ * Return a sanitized absolute path.
+ * */
+function abs_path($path) {
+    if(!isset($path) || empty($path)) {
+        return SITE_PATH;
+    }
+
+    $path = str_replace(['..', '~'], '', $path);
+
+    $safe_path = realpath(SITE_PATH . DIRECTORY_SEPARATOR . $path);
+
+    if($safe_path === false || !str_starts_with($safe_path, SITE_PATH)) {
+        return false;
+    }
+
+    return $safe_path;
+}
+
+/**
+ * Return a relative path.
+ * */
+function rel_path($path) {
+    return ltrim(str_replace(SITE_PATH, '', $path), '/\\');
+}
+
+/**
  * Function to check if FilesystemIterator has files.
  *
  * @param FilesystemIterator $fsi Class to be checked for files.
@@ -35,6 +61,9 @@ function has_files($fsi): bool {
 
 /**
  * Convert bytes.
+ *
+ * @param int $bytes Bytes to be converted.
+ * @return string display of converted units.
  *
  * @see https://stackoverflow.com/a/28047922
  * */
