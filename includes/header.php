@@ -13,3 +13,8 @@ include SITE_PATH . '/src/php/helpers.php';
 </head>
 
 <body>
+
+<noscript>
+<!--This is a little joke.-->
+By disabling JS, you've made the right choice. Enjoy your freedom.
+</noscript>
