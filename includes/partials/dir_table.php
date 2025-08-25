@@ -24,13 +24,14 @@ if (is_dir($path)) {
 <table id="dirListTable">
     <tr>
         <th>Name</th>
+        <th>Type</th>
         <th>Size</th>
         <th>Last Opened</th>
     </tr>
 
     <?php if (!has_files($fsi)): ?>
         <tr>
-            <td colspan="3">
+            <td colspan="4">
                 Nothing to show here.
             </td>
         </tr>
@@ -43,6 +44,7 @@ if (is_dir($path)) {
                         <?= htmlspecialchars($f->getFilename()) ?>
                     </a>
                 </td>
+                <td><?= $f->getExtension() ?></td>
                 <td><?= byteConvert($f->getSize()) ?></td>
                 <td><?= date('d F y', filemtime($f)) ?></td>
             </tr>
