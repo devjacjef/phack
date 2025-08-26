@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file contains the file browser for phplayground.
+ * This file contains the file browser for phack.
  */
 
 $path = get_path();

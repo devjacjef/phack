@@ -21,5 +21,5 @@ include SITE_PATH . '/src/php/helpers.php';
 <body>
 <div class="wrapper">
     <header class="page-header">
-        <a href="?path=/" class="logo">layground</a>
+        <a href="?path=/" class="logo">phack.</a>
     </header>

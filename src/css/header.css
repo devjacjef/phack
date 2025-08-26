@@ -20,12 +20,11 @@
   font-weight: bold;
 }
 
-.page-header a.logo:before {
+.page-header a.logo {
     color: white;
     background-color: #474A8A;
-    padding: 2px;
+    padding: 4px;
     border-radius: 4px;
-    content: "PHP";
 }
 
 .page-header a:hover {
