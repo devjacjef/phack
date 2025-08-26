@@ -1,1 +1,13 @@
+@import 'header.css';
+@import 'body.css';
 @import 'table.css';
+@import 'footer.css';
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
