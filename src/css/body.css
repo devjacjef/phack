@@ -1,0 +1,12 @@
+body {
+    height: 100%;
+    font: 1.2em sans-serif;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
