@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 <?php include __DIR__ . '/includes/header.php' ?>
 
+<div class="main"/>
 <?php include __DIR__ . '/includes/partials/file_browser.php' ?>
-
+</div>
 <?php include __DIR__ . '/includes/footer.php' ?>

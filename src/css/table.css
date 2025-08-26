@@ -1,16 +1,16 @@
-#dirListTableWrapper {
+#fileBrowserWrapper {
   max-height: 90vh;
   overflow-x: auto;
   overflow-y: auto;
 }
 
-#dirListTable {
+#fileBrowserTable {
   width: 80vw;
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
 }
 
-#dirListTable td, th{
+#fileBrowserTable td, th{
     border: 1px solid #ddd;
     padding: 8px;
 }

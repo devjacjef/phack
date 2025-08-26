@@ -11,8 +11,8 @@ $path = get_path();
 $fsi = serve_path($path);
 ?>
 
-<div id="dirListTableWrapper">
-    <table id="dirListTable">
+<div id="fileBrowserWrapper">
+    <table id="fileBrowserTable">
         <tr>
             <th>Name</th>
             <th>Type</th>
