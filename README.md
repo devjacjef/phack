@@ -1,4 +1,5 @@
 # `phack.`
+*phack around and find out!*
 
 `phack.` is a small project that indexes subdirectories into a web interface
 allowing a developer to keep track of small demos they are working on.
