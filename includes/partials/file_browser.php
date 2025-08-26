@@ -7,13 +7,7 @@
 $path = get_path();
 
 // Exit script early if the path cannot be found.
-if (!file_exists($path)) {
-    echo 'Requested resource was not found.';
-    return;
-}
 
-// If directory, iterate all files in file system
-// else if file, get contents and display them.
 $fsi = serve_path($path);
 ?>
 
