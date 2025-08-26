@@ -1,7 +1,13 @@
+#dirListTableWrapper {
+  max-height: 90vh;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
 #dirListTable {
-font-family: Arial, Helvetica, sans-serif;
+  width: 80vw;
+  font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
 }
 
 #dirListTable td, th{

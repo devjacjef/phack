@@ -11,34 +11,38 @@ $path = get_path();
 $fsi = serve_path($path);
 ?>
 
-<table id="dirListTable">
-    <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Size</th>
-        <th>Last Opened</th>
-    </tr>
-
-    <?php if (!has_files($fsi)): ?>
+<div id="dirListTableWrapper">
+    <table id="dirListTable">
         <tr>
-            <td colspan="4">
-                Nothing to show here.
-            </td>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Created At</th>
+            <th>Last Opened</th>
         </tr>
-    <?php else: ?>
 
-        <?php foreach ($fsi as $f): ?>
+        <?php if (!has_files($fsi)): ?>
             <tr>
-                <td>
-                    <a href="?path=<?= urlencode(rel_path($path . '/' . $f->getFilename())) ?>">
-                        <?= htmlspecialchars($f->getFilename()) ?>
-                    </a>
+                <td colspan="4">
+                    Nothing to show here.
                 </td>
-                <td><?= $f->getExtension() ?></td>
-                <td><?= byteConvert($f->getSize()) ?></td>
-                <td><?= date('d F y', filemtime($f)) ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php else: ?>
 
-    <?php endif; ?>
-</table>
+            <?php foreach ($fsi as $f): ?>
+                <tr>
+                    <td>
+                        <a href="?path=<?= urlencode(rel_path($path . '/' . $f->getFilename())) ?>">
+                            <?= htmlspecialchars($f->getFilename()) ?>
+                        </a>
+                    </td>
+                    <td><?= $f->getExtension() ?></td>
+                    <td><?= byteConvert($f->getSize()) ?></td>
+                    <td><?= date('d F y', filectime($f)) ?></td>
+                    <td><?= date('d F y', fileatime($f)) ?></td>
+                </tr>
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+    </table>
+</div>
