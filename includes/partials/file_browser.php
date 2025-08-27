@@ -23,7 +23,7 @@ $fsi = serve_path($path);
 
         <?php if (!has_files($fsi)): ?>
             <tr>
-                <td colspan="4">
+                <td colspan="5">
                     Nothing to show here.
                 </td>
             </tr>
