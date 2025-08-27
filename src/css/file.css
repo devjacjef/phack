@@ -1,3 +1,16 @@
+#fileToolbar {
+  width: 80vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#fileToolbar button {
+  color: white;
+  background-color: #474A8A;
+  border: 0;
+  padding: 8px;
+  margin: 0 4px 4px 0;
+}
+
 #fileBrowserWrapper {
   overflow-x: auto;
   overflow-y: auto;

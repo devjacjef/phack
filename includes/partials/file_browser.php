@@ -1,5 +1,7 @@
 <?php
 
+// NOTE: Refactoring later... Move to src/
+
 /*
  * This file contains the file browser for phack.
  */
@@ -9,9 +11,10 @@ $path = get_path();
 // Exit script early if the path cannot be found.
 
 $fsi = serve_path($path);
+
+include __DIR__ . '/file_toolbar.php';
 ?>
 
-<div id="fileBrowserWrapper">
     <table id="fileBrowserTable">
         <tr>
             <th>Name</th>
