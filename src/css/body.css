@@ -9,11 +9,12 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    margin: auto;
 }
 
 .main {
     display: flex;
+    flex-direction: column;
     margin: 1vh;
-    justify-content: center;
     overflow-y: auto;
 }
