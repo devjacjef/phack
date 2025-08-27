@@ -14,6 +14,7 @@ toolbarForm.addEventListener('submit', function (event) {
     / if there is something there without a file extension create it anyways
     */
     if (action === 'create') {
+        clickedButton.disabled = true;
         // TODO: Make it show a new entry for the table.
         let fileTable = document.getElementById('fileBrowserTable');
 
@@ -28,6 +29,9 @@ toolbarForm.addEventListener('submit', function (event) {
         newInput.placeholder = "filename.txt";
 
         newCell.appendChild(newInput);
+
+        // needs conditionally checked
+        // clickedButton.disabled = false;
     } else if (action === 'upload') {
         // TODO: Handle upload.
     } else if (action === 'download') {
