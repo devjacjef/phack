@@ -116,3 +116,13 @@ function byteConvert($bytes)
 
     return round($bytes / pow(1024, $e), 2) . $s[$e];
 }
+
+/**
+ * Create bread crumbs from path.
+ * */
+function crumbs() {
+    $path = get_path();
+    $crumbs = array_filter(explode('/', rel_path($path)));
+    $crumbs = array_map('ucwords', $crumbs);
+    return array_values($crumbs);
+}
