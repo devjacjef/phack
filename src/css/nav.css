@@ -13,12 +13,12 @@
 
 .breadcrumb li:not(:last-child)::after {
   display: inline-block;
-  margin: 0 0.25rem;
+  margin: 0 0.25rem 0 0.25rem;
   content: "/";
-  color: blue;
+  color: #474A8A;
 }
 
 .breadcrumb a {
-    color: blue;
+  color: #474A8A;
     text-decoration: none;
 }
