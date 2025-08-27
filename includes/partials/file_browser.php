@@ -15,6 +15,7 @@ $fsi = serve_path($path);
 include __DIR__ . '/file_toolbar.php';
 ?>
 
+<div id="fileBrowserWrapper">
     <table id="fileBrowserTable">
         <tr>
             <th>Name</th>
