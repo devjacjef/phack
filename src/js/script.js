@@ -8,6 +8,11 @@ toolbarForm.addEventListener('submit', function (event) {
     const clickedButton = event.submitter;
     const action = clickedButton.name;
 
+    /**
+    / The intention here is to have it create a new input
+    / that if null deletes this row or if submitted and is empty, deletes the row
+    / if there is something there without a file extension create it anyways
+    */
     if (action === 'create') {
         // TODO: Make it show a new entry for the table.
         let fileTable = document.getElementById('fileBrowserTable');
@@ -18,8 +23,11 @@ toolbarForm.addEventListener('submit', function (event) {
 
         newCell.colSpan = 5;
 
-        let newText = document.createTextNode("New bottom row");
-        newCell.appendChild(newText);
+        let newInput = document.createElement("input");
+
+        newInput.placeholder = "filename.txt";
+
+        newCell.appendChild(newInput);
     } else if (action === 'upload') {
         // TODO: Handle upload.
     } else if (action === 'download') {
